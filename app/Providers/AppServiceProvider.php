@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Donation;
+use App\Models\News;
 use App\Models\Slider;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
@@ -23,6 +25,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Relation::morphMap([
             'slider' => Slider::class,
+            'news' => News::class,
+            'donation' => Donation::class,
         ]);
     }
 }

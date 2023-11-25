@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
                 AdminSeeder::class,
                 LanguageTableSeeder::class,
                 PermissionsTableSeeder::class,
+                NewsSeeder::class,
+                DonatesSeeder::class,
             ]);
-
-//        $this->call(SettingsTableSeeder::class);
     }
 }

@@ -49,6 +49,16 @@ class LanguageTableSeeder extends Seeder
                 'created_at' => '2022-04-12 20:38:46',
                 'updated_at' => '2022-04-12 20:39:06',
             ),
+            3 =>
+                array (
+                    'id' => 4,
+                    'name' => 'Türkçe',
+                    'code' => 'tr',
+                    'default' => 0,
+                    'status' => 0,
+                    'created_at' => '2022-04-12 20:38:46',
+                    'updated_at' => '2022-04-12 20:39:06',
+                ),
         ));
 
 

@@ -14,8 +14,17 @@
         <div class="topbar">
             <div class="dropdown">
                 <div class="topbar-item" data-offset="10px,0px">
-                    <a href="javascript:void(0);" class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1" onclick="event.preventDefault(); document.getElementById('lang').submit();">
+                    <a href="javascript:void(0);" class="btn btn-icon btn-clean btn-dropdown btn-lg"
+{{--                       onclick="event.preventDefault(); document.getElementById('lang').submit();"--}}
+                    >
                         <img src="{{  asset('backend/svg/az.svg') }}" class="h-20px w-20px rounded-sm" alt="Az">
+                    </a>
+                </div>
+                <div class="topbar-item" data-offset="10px,0px">
+                    <a href="javascript:void(0);" class="btn btn-icon btn-clean btn-dropdown btn-lg"
+                        {{--                       onclick="event.preventDefault(); document.getElementById('lang').submit();"--}}
+                    >
+                        <img src="{{  asset('backend/svg/Ottoman_flag.svg.png') }}" class="h-20px w-20px rounded-sm" alt="Az">
                     </a>
                 </div>
             </div>

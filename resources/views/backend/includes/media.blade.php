@@ -56,7 +56,7 @@
             @endif
         </h2>
         @foreach($model->getDocuments($media_collection_name) as $image)
-            <div class="">
+            <div class="mr-3">
                 <div class="media media_custom">
                     @if(strpos($media_collection_name, 'video_image') !== false)
                         <a class="gal-item showcase" data-rel="lightcase:myCollection:slideshow"

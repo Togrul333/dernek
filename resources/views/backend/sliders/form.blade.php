@@ -125,7 +125,7 @@
                                 </label>
                                 <div class="col-lg-6 col-md-9 col-sm-12">
                                     <div class="input-group">
-                                        <input id="order" type="text" class="form-control @if($errors->has("order")) is-invalid @endif" name="order" value="{{ isset($slider) ? $slider->order : old('order') }}">
+                                        <input id="order" type="number" class="form-control @if($errors->has("order")) is-invalid @endif" name="order" value="{{ isset($slider) ? $slider->order : old('order') }}">
                                         @if ($errors->has("order"))
                                             <div class="invalid-feedback">{{ $errors->first("order") }}</div>
                                         @endif

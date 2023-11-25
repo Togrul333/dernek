@@ -16,6 +16,8 @@ use \App\Http\Controllers\Backend\SettingController;
 use \App\Http\Controllers\Backend\DotEnvController;
 use \App\Http\Controllers\Backend\LanguageTranslationController;
 use \App\Http\Controllers\Backend\LogController;
+use \App\Http\Controllers\Backend\NewsController;
+use \App\Http\Controllers\Backend\DonationController;
 
 Route::fallback(function () {
     return view('backend.errors.404');
@@ -46,6 +48,13 @@ Route::group(['middleware' => ['auth:admin']], function () {
 
     // sliders
     Route::resource('/sliders', SliderController::class);
+
+    //news
+    Route::resource('/news', NewsController::class);
+
+    //donations
+    Route::resource('/donations', DonationController::class);
+
 
     Route::post('/documents/{document}/delete', [\App\Http\Controllers\Backend\DocumentsController::class, 'deleteDocument'])->name('delete.document');
 

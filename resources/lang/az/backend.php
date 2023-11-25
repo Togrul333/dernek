@@ -360,6 +360,8 @@ return array(
             'services' => 'Xidmətlər',
             'settings' => 'Tənzimləmələr',
             'sliders' => 'Slayderlər',
+            'news' => 'Haberler',
+            'donations' => 'Ianələr',
             'stores' => 'Mağazalar',
             'subscribers' => 'Abunəçilər',
             'teams' => '',

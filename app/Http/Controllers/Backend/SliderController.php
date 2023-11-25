@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\FormSliderRequest;
 use App\Models\Slider;
 use App\Services\UploadDocumentService;
-use App\Services\UploadImageService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -139,7 +138,7 @@ class SliderController extends Controller
             ->of($data)
             ->addColumn('image', function ($row) {
                 $src = $row->first_image ? $row->first_image : asset('backend/img/noimage.jpg');
-                return '<img src="' . $src . '" alt="' . $row->transtitle . '" style="width:26px; object-fit: contain;">';
+                return '<img src="' . $src . '" alt="' . $row->id . '" style="width:26px; object-fit: contain;">';
             })
             ->addColumn('link', function ($row) {
                 return $row->link;
