@@ -305,6 +305,7 @@ return array(
             404 => 'Səhifə tapılmadı',
             'about-block' => '',
             'admins' => 'İdarəçilər',
+            'contacts' => 'Contacts',
             'advantages' => 'Üstünlüklər',
             'attribute-groups' => 'Attribut qrupları',
             'attributes' => 'Attributlar',

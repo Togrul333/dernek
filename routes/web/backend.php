@@ -18,14 +18,12 @@ use \App\Http\Controllers\Backend\LanguageTranslationController;
 use \App\Http\Controllers\Backend\LogController;
 use \App\Http\Controllers\Backend\NewsController;
 use \App\Http\Controllers\Backend\DonationController;
+use \App\Http\Controllers\Backend\ContactController;
 
 Route::fallback(function () {
     return view('backend.errors.404');
 });
 
-//Route::get('/test',function (){
-//   dd('fff');
-//});
 Route::middleware(['guest:admin'])->group(function () {
     Route::get('/login-admin', [AuthController::class, 'loginForm'])->name('login.form');
     Route::post('/login-admin', [AuthController::class, 'login'])->name('login');
@@ -54,6 +52,9 @@ Route::group(['middleware' => ['auth:admin']], function () {
 
     //donations
     Route::resource('/donations', DonationController::class);
+
+    //contacts
+    Route::resource('/contacts', ContactController::class);
 
 
     Route::post('/documents/{document}/delete', [\App\Http\Controllers\Backend\DocumentsController::class, 'deleteDocument'])->name('delete.document');

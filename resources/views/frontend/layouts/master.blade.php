@@ -38,19 +38,19 @@
         <ul class="mobile-nav__contact list-unstyled">
             <li>
                 <i class="fas fa-envelope"></i>
-                <a href="mailto:needhelp@asting.com">needhelp@asting.com</a>
+                <a href="mailto:{!! settings('email') !!}">{!! settings('email') !!}</a>
             </li>
             <li>
                 <i class="fas fa-phone-square-alt"></i>
-                <a href="tel:666-888-0000">666 888 0000</a>
+                <a href="tel:{!! settings('phone') !!}">{!! settings('phone') !!}</a>
             </li>
         </ul>
         <div class="mobile-nav__top">
             <div class="mobile-nav__social">
-                <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="facebook"><i class="fab fa-facebook-square"></i></a>
-                <a href="#" aria-label="pinterest"><i class="fab fa-pinterest-p"></i></a>
-                <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="{!! settings('twitter') !!}" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="{!! settings('facebook') !!}" aria-label="facebook"><i class="fab fa-facebook-square"></i></a>
+{{--                <a href="{!! settings('instagram') !!}" aria-label="pinterest"><i class="fab fa-pinterest-p"></i></a>--}}
+                <a href="{!! settings('instagram') !!}" aria-label="instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </div>
@@ -62,8 +62,8 @@
         <div class="cursor-follower"></div>
     </div>
     <div class="search-popup__inner">
-        <form action="#" class="search-popup__form">
-            <input type="text" name="search" placeholder="Type here to Search....">
+        <form method="get" action="{{route('frontend.news')}}" class="search-popup__form">
+            <input type="text" name="search" placeholder="Search....">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>

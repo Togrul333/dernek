@@ -1,7 +1,8 @@
 <section class="popular-causes-two">
     <div class="container">
         <div class="block-title text-center">
-            <h4>Help the People</h4>
+{{--            <h4>Help the People</h4>--}}
+            <h4></h4>
             <h2>Our Popular Causes</h2>
         </div>
         <div class="row">

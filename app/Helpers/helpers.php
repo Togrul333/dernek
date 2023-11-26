@@ -640,3 +640,21 @@ function menuTree($items = array(), $parent_id = 0): array
     }
     return $tree;
 }
+if (!function_exists('settings')) {
+    function settings($type = null)
+    {
+        $return = '';
+
+        $settings = Cache::remember('settings', 1800, function () {
+            return collect(Setting::with('translations')->get());
+        });
+
+        foreach ($settings as $setting) {
+            if ($setting->name == $type) {
+                return $setting->translations->where('locale', locale())->first()->content ?? '';
+            }
+        }
+
+        return $return;
+    }
+}

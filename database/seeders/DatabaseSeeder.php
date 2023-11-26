@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
                 PermissionsTableSeeder::class,
                 NewsSeeder::class,
                 DonatesSeeder::class,
+                SettingSeeder::class,
             ]);
     }
 }

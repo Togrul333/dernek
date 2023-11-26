@@ -7,13 +7,12 @@
                         <div class="footer-widget__logo">
                             <a href=""><img src="<?php echo e(asset('frontend/assets/images/resources/footer-logo.png')); ?>" alt=""></a>
                         </div>
-                        <p class="footer-widget__text">Lorem ipsum dolor sit ame consect etur pisicing elit sed
-                            do eiusmod tempor incididunt ut labore.</p>
+                        <p class="footer-widget__text"><?php echo settings('footer_text'); ?></p>
                         <div class="site-footer__social">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="clr-fb"><i class="fab fa-facebook-square"></i></a>
-                            <a href="#" class="clr-dri"><i class="fab fa-dribbble"></i></a>
-                            <a href="#" class="clr-ins"><i class="fab fa-instagram"></i></a>
+                            <a href="<?php echo settings('twitter'); ?>"><i class="fab fa-twitter"></i></a>
+                            <a href="<?php echo settings('facebook'); ?>" class="clr-fb"><i class="fab fa-facebook-square"></i></a>
+                            <a href="<?php echo settings('dribbble'); ?>" class="clr-dri"><i class="fab fa-dribbble"></i></a>
+                            <a href="<?php echo settings('instagram'); ?>" class="clr-ins"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -21,17 +20,17 @@
                     <div class="footer-widget__column footer-widget__explore clearfix">
                         <h3 class="footer-widget__title">Explore</h3>
                         <ul class="footer-widget__explore-list list-unstyled">
-                            <li><a href="#">Donate</a></li>
-                            <li><a href="#">Campaigns</a></li>
-                            <li><a href="#">Fundraise</a></li>
-                            <li><a href="#">Volunteers</a></li>
-                            <li><a href="#">Sponsors</a></li>
+                            <li><a href="<?php echo e(route('frontend.donations')); ?>">Donations</a></li>
+
+
+
+
                         </ul>
                         <ul class="footer-widget__explore-list footer-widget__explore-list-two list-unstyled">
-                            <li><a href="#">Fundraising</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Faqs</a></li>
+                            <li><a href="<?php echo e(route('frontend.news')); ?>">News</a></li>
+                            <li><a href="<?php echo e(route('frontend.contact')); ?>">Contact</a></li>
+
+
                         </ul>
                     </div>
                 </div>
@@ -44,7 +43,7 @@
                                     <i class="fas fa-phone-square-alt"></i>
                                 </div>
                                 <div class="text">
-                                    <p><a href="tel:666-888-0000">666 888 0000</a></p>
+                                    <p><a href="tel:<?php echo settings('phone'); ?>"><?php echo settings('phone'); ?></a></p>
                                 </div>
                             </li>
                             <li>
@@ -52,7 +51,7 @@
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div class="text">
-                                    <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                    <p><a href="mailto:<?php echo settings('email'); ?>"><?php echo settings('email'); ?></a></p>
                                 </div>
                             </li>
                             <li>
@@ -60,7 +59,7 @@
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div class="text">
-                                    <p>666 road, broklyn street new york 600</p>
+                                    <p><?php echo settings('location'); ?></p>
                                 </div>
                             </li>
                         </ul>
@@ -69,8 +68,7 @@
                 <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                     <div class="footer-widget__column footer-widget__support">
                         <h3 class="footer-widget__title">Support</h3>
-                        <p class="footer-widget__support-text">Lorem ipsum dolor sit ame consect etur pisicing
-                            elit sed do eiusmod tempor incididunt ut labore.</p>
+                        <p class="footer-widget__support-text"><?php echo settings('footer_support_text'); ?></p>
                         <div class="footer-widget__support-btn">
                             <a href=""><i class="fas fa-heart"></i>Donate</a>
                         </div>
@@ -87,13 +85,15 @@
             <div class="col-xl-12">
                 <div class="site-footer-bottom__inner">
                     <div class="site-footer-bottom__left">
-                        <p>© Copyright 2021 by <a href="#">Layerdrops.com</a></p>
+                        <p>© Copyright 2023
+
+                        </p>
                     </div>
-                    <ul class="site-footer-bottom__menu list-unstyled">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><span>/</span></li>
-                        <li><a href="#">Terms of Condition</a></li>
-                    </ul>
+
+
+
+
+
                 </div>
             </div>
         </div>
