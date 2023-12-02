@@ -1,92 +1,122 @@
 <section class="popular-causes-two">
     <div class="container">
         <div class="block-title text-center">
-
+            
             <h4></h4>
             <h2>Our Popular Causes</h2>
         </div>
         <div class="row">
-            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                <div class="popular-causes__sinlge">
-                    <div class="popular-causes__img">
-                        <img src="<?php echo e(asset('frontend/assets/images/resources/popular-causes-two-1.jpg')); ?>" alt="">
-                        <div class="popular-causes__category">
-                            <p>Food</p>
-                        </div>
-                    </div>
-                    <div class="popular-causes__content">
-                        <div class="popular-causes__title">
-                            <h3><a href="">Raise Fund for Clean & Healthy Water</a></h3>
-                            <p>Aliq is notm hendr erit a augue insu image pellen tes.</p>
-                        </div>
-                        <div class="popular-causes__progress">
-                            <div class="bar">
-                                <div class="bar-inner count-bar" data-percent="36%">
-                                    <div class="count-text">36%</div>
-                                </div>
+            <?php $__currentLoopData = $donations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $donation): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="popular-causes__sinlge">
+                        <div class="popular-causes__img">
+                            <img src="<?php echo e($donation->first_image); ?>" alt="">
+                            <div class="popular-causes__category">
+                                
                             </div>
-                            <div class="popular-causes__goals">
-                                <p><span>$25,270</span> Raised</p>
-                                <p><span>$30,000</span> Goal</p>
+                        </div>
+                        <div class="popular-causes__content">
+                            <div class="popular-causes__title">
+                                <h3><a href="<?php echo e(route('frontend.donations.detail',['donation'=>$donation])); ?>"
+                                    ><?php echo e(\Illuminate\Support\Str::limit($donation->translate(locale())->title,30)); ?></a></h3>
+                                <p><?php echo e(\Illuminate\Support\Str::limit($donation->translate(locale())->content,100)); ?></p>
+                            </div>
+                            <div class="popular-causes__progress">
+                                <div class="bar">
+                                    <div class="bar-inner count-bar" data-percent="36%">
+                                        <div class="count-text"><?php echo e($donation->percent); ?>%</div>
+                                    </div>
+                                </div>
+                                <div class="popular-causes__goals">
+                                    <p><span>$<?php echo e($donation->raised); ?></span> Raised</p>
+                                    <p><span>$<?php echo e($donation->goal); ?></span> Goal</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                <div class="popular-causes__sinlge">
-                    <div class="popular-causes__img">
-                        <img src="<?php echo e(asset('frontend/assets/images/resources/popular-causes-two-2.jpg')); ?>" alt="">
-                        <div class="popular-causes__category">
-                            <p>Education</p>
-                        </div>
-                    </div>
-                    <div class="popular-causes__content">
-                        <div class="popular-causes__title">
-                            <h3><a href="">School Counseling for Children</a></h3>
-                            <p>Aliq is notm hendr erit a augue insu image pellen tes.</p>
-                        </div>
-                        <div class="popular-causes__progress">
-                            <div class="bar">
-                                <div class="bar-inner count-bar" data-percent="36%">
-                                    <div class="count-text">36%</div>
-                                </div>
-                            </div>
-                            <div class="popular-causes__goals">
-                                <p><span>$25,270</span> Raised</p>
-                                <p><span>$30,000</span> Goal</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                <div class="popular-causes__sinlge">
-                    <div class="popular-causes__img">
-                        <img src="<?php echo e(asset('frontend/assets/images/resources/popular-causes-two-3.jpg')); ?>" alt="">
-                        <div class="popular-causes__category">
-                            <p>Education</p>
-                        </div>
-                    </div>
-                    <div class="popular-causes__content">
-                        <div class="popular-causes__title">
-                            <h3><a href="">Growing Up children in Charity Care</a></h3>
-                            <p>Aliq is notm hendr erit a augue insu image pellen tes.</p>
-                        </div>
-                        <div class="popular-causes__progress">
-                            <div class="bar">
-                                <div class="bar-inner count-bar" data-percent="36%">
-                                    <div class="count-text">36%</div>
-                                </div>
-                            </div>
-                            <div class="popular-causes__goals">
-                                <p><span>$25,270</span> Raised</p>
-                                <p><span>$30,000</span> Goal</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         </div>
     </div>
 </section>

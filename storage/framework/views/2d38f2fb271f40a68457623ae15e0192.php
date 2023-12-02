@@ -7,89 +7,38 @@
                         <h4>From the Blog</h4>
                         <h2>Latest News <br> & Articles</h2>
                     </div>
-                    <p class="news-two__text">There are many variations of passages of Lorem Ipsum available
-                        simply free text, but the majority.</p>
+                    <p class="news-two__text">We Work for Humanity</p>
                 </div>
             </div>
             <div class="col-xl-8">
                 <div class="news-two__right">
                     <div class="news-two__carousel owl-theme owl-carousel">
-                        <!--News two Single-->
+                        <?php $__currentLoopData = $news; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $new_item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="news-one__single">
                             <div class="news-one__img">
                                 <div class="news-one__img-box">
-                                    <img src="<?php echo e(asset('frontend/assets/images/blog/news-two-img-1.jpg')); ?>" alt="">
-                                    <a href="news-details.html"></a>
+                                    <img src="<?php echo e($new_item->first_image); ?>" alt="">
+                                    <a href="<?php echo e(route('frontend.news.detail',['news'=>$new_item])); ?>"></a>
                                 </div>
                                 <div class="news-one__date-box">
-                                    <p>23 <br> Dec</p>
+                                    <p><?php echo e(\Illuminate\Support\Carbon::parse($new_item->action_date)->format('d M')); ?></p>
                                 </div>
                             </div>
                             <div class="news-one__content">
-                                <ul class="list-unstyled news-one__meta">
-                                    <li><a href="#"><i class="far fa-user-circle"></i> Admin</a></li>
-                                    <li><span>/</span></li>
-                                    <li><a href="#"><i class="far fa-comments"></i> 2 Comments</a>
-                                    </li>
-                                </ul>
+
+
+
+
+
+
                                 <div class="news-one__title">
-                                    <h3><a href="news-details.html">How Does Malnutrition Affect Children?</a>
+                                    <h3><a href="<?php echo e(route('frontend.news.detail',['news'=>$new_item])); ?>"><?php echo translation($new_item)->title; ?></a>
                                     </h3>
                                 </div>
-                                <a href="news-details.html" class="thm-btn news-one__btn">More</a>
+                                <a href="<?php echo e(route('frontend.news.detail',['news'=>$new_item])); ?>" class="thm-btn news-one__btn">More</a>
                             </div>
                         </div>
-                        <!--News two Single-->
-                        <div class="news-one__single">
-                            <div class="news-one__img">
-                                <div class="news-one__img-box">
-                                    <img src="<?php echo e(asset('frontend/assets/images/blog/news-two-img-2.jpg')); ?>" alt="">
-                                    <a href="news-details.html"></a>
-                                </div>
-                                <div class="news-one__date-box">
-                                    <p>23 <br> Dec</p>
-                                </div>
-                            </div>
-                            <div class="news-one__content">
-                                <ul class="list-unstyled news-one__meta">
-                                    <li><a href="#"><i class="far fa-user-circle"></i> Admin</a></li>
-                                    <li><span>/</span></li>
-                                    <li><a href="#"><i class="far fa-comments"></i> 2 Comments</a>
-                                    </li>
-                                </ul>
-                                <div class="news-one__title">
-                                    <h3><a href="news-details.html">Leverage agile frameworks to provide a.</a>
-                                    </h3>
-                                </div>
-                                <a href="news-details.html" class="thm-btn news-one__btn">More</a>
-                            </div>
-                        </div>
-                        <!--News two Single-->
-                        <div class="news-one__single">
-                            <div class="news-one__img">
-                                <div class="news-one__img-box">
-                                    <img src="<?php echo e(asset('frontend/assets/images/blog/news-two-img-3.jpg')); ?>" alt="">
-                                    <a href="news-details.html"></a>
-                                </div>
-                                <div class="news-one__date-box">
-                                    <p>23 <br> Dec</p>
-                                </div>
-                            </div>
-                            <div class="news-one__content">
-                                <ul class="list-unstyled news-one__meta">
-                                    <li><a href="#"><i class="far fa-user-circle"></i> Admin</a></li>
-                                    <li><span>/</span></li>
-                                    <li><a href="#"><i class="far fa-comments"></i> 2 Comments</a>
-                                    </li>
-                                </ul>
-                                <div class="news-one__title">
-                                    <h3><a href="news-details.html">Bring to the table win-win survival
-                                            strategies.</a>
-                                    </h3>
-                                </div>
-                                <a href="news-details.html" class="thm-btn news-one__btn">More</a>
-                            </div>
-                        </div>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
             </div>

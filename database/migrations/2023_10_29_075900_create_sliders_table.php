@@ -16,6 +16,7 @@ return new class extends Migration
             $table->enum('type',['mobile','desktop'])->default('desktop');
             $table->string('link')->nullable();
             $table->enum('status',['1','0'])->default('1');
+            $table->boolean('show_on_home')->default(false);
             $table->integer('order')->unsigned()->nullable();
             $table->timestamps();
         });

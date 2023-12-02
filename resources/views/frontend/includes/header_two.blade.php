@@ -61,13 +61,16 @@
 {{--                                        </li>--}}
 {{--                                    </ul>--}}
                                 </li>
-                                <li class="dropdown">
-                                    <a href="#">Pages</a>
-                                    <ul>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="volunteer.html">Volunteers</a></li>
-                                    </ul>
-                                </li>
+
+{{--                                <li class="dropdown">--}}
+{{--                                    <a href="#">Pages</a>--}}
+{{--                                    <ul>--}}
+{{--                                        <li><a href="about.html">About</a></li>--}}
+{{--                                        <li><a href="volunteer.html">Volunteers</a></li>--}}
+{{--                                    </ul>--}}
+{{--                                </li>--}}
+
+
                                 <li class="dropdown {{ url()->current() == route('frontend.donations') ? 'current' : '' }}">
                                     <a href="{{route('frontend.donations')}}">Donations</a>
 {{--                                    <ul>--}}

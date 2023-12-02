@@ -18,6 +18,7 @@ class FormSliderRequest extends FormRequest
     {
         $this->merge([
             'status' => $this->has('status') ? '1' : '0',
+            'show_on_home' => $this->has('show_on_home') ? '1' : '0',
         ]);
     }
 
@@ -38,9 +39,10 @@ class FormSliderRequest extends FormRequest
             'link'=>['string','nullable'],
             'image' => 'required',
             'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'type' => ['required'],
+            'type' => ['nullable'],
             'order' => ['required'],
             'status' => ['required'],
+            'show_on_home' => ['nullable'],
         ];
 
         // For Update

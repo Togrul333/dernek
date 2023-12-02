@@ -3,13 +3,16 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Document;
 use App\Models\Language;
 use App\Models\News;
 use App\Services\UploadImagesService;
+use GuzzleHttp\Client;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Faker\Factory as Faker;
 
@@ -30,6 +33,20 @@ class NewsSeeder extends Seeder
             'created_at' => '2022-04-15 12:08:18',
             'updated_at' => '2022-04-15 12:08:18',
         ]);
+        $imageUrl = asset('frontend/assets/images/sunnet.jpg');
+        $client = new Client();
+        $response = $client->get($imageUrl);
+
+        $imageName = pathinfo($imageUrl, PATHINFO_BASENAME);
+        $path = 'public/documents/news/' . $imageName;
+        Document::create([
+            'manipulationable_type' => 'news',
+            'manipulationable_id' => $news->id,
+            'document' => 'news/'.$imageName,
+            'collection_name' => 'news',
+        ]);
+        Storage::put($path, $response->getBody());
+
         foreach ($langs as $lang) {
             $news->translations()->create([
                 'locale' => $lang->code,
@@ -48,6 +65,20 @@ class NewsSeeder extends Seeder
             'created_at' => '2022-04-15 12:08:18',
             'updated_at' => '2022-04-15 12:08:18',
         ]);
+        $imageUrl = asset('frontend/assets/images/kurban.jpeg');
+        $client = new Client();
+        $response = $client->get($imageUrl);
+
+        $imageName = pathinfo($imageUrl, PATHINFO_BASENAME);
+        $path = 'public/documents/news/' . $imageName;
+        Document::create([
+            'manipulationable_type' => 'news',
+            'manipulationable_id' => $news->id,
+            'document' => 'news/'.$imageName,
+            'collection_name' => 'news',
+        ]);
+        Storage::put($path, $response->getBody());
+
         foreach ($langs as $lang) {
             $news->translations()->create([
                 'locale' => $lang->code,
@@ -68,6 +99,19 @@ Kurban eti dağıtımı sırasında, insanların sevinç dolu yüz ifadelerini g
             'created_at' => '2022-04-15 12:08:18',
             'updated_at' => '2022-04-15 12:08:18',
         ]);
+        $imageUrl = asset('frontend/assets/images/kitab.jpeg');
+        $client = new Client();
+        $response = $client->get($imageUrl);
+
+        $imageName = pathinfo($imageUrl, PATHINFO_BASENAME);
+        $path = 'public/documents/news/' . $imageName;
+        Document::create([
+            'manipulationable_type' => 'news',
+            'manipulationable_id' => $news->id,
+            'document' => 'news/'.$imageName,
+            'collection_name' => 'news',
+        ]);
+        Storage::put($path, $response->getBody());
         foreach ($langs as $lang) {
             $news->translations()->create([
                 'locale' => $lang->code,

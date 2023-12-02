@@ -56,13 +56,17 @@
 
 
                             </li>
-                            <li class="dropdown ">
-                                <a href="#">Pages</a>
-                                <ul>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="volunteer.html">Volunteers</a></li>
-                                </ul>
-                            </li>
+
+
+
+
+
+
+
+
+
+
+
                             <li class="dropdown <?php echo e(url()->current() == route('frontend.donations') ? 'current' : ''); ?>">
                                 <a href="<?php echo e(route('frontend.donations')); ?>">Donations</a>
 
@@ -97,7 +101,7 @@
                         </div>
 
                         <div class="main-nav__right__btn-one">
-                            <a href="campaigns.html"><i class="fas fa-heart"></i>Donate</a>
+                            <a href=""><i class="fas fa-heart"></i>Donate</a>
                         </div>
                     </div>
                 </div>

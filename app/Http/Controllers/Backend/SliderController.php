@@ -41,10 +41,11 @@ class SliderController extends Controller
         DB::beginTransaction();
         try {
             $slider = Slider::create([
-                'type' => $data['type'],
+//                'type' => $data['type'],
                 'order' => $data['order'],
                 'link' => $data['link'],
                 'status' => $data['status'],
+                'show_on_home' => $data['show_on_home'],
             ]);
             foreach (Cache::get('active_langs') as $lang) {
                 $slider->translations()->create([
@@ -86,10 +87,11 @@ class SliderController extends Controller
         DB::beginTransaction();
         try {
             $slider->update([
-                'type' => $data['type'],
+//                'type' => $data['type'],
                 'order' => $data['order'],
                 'link' => $data['link'],
                 'status' => $data['status'],
+                'show_on_home' => $data['show_on_home'],
             ]);
             foreach (Cache::get('active_langs') as $lang) {
                 $slider->translations()->updateOrcreate(

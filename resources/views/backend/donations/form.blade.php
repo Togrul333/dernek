@@ -155,6 +155,54 @@
                                 </div>
                             </div>
 
+                            <div class="form-group row">
+                                <label for="percent" class="col-form-label text-right col-lg-3 col-sm-12">
+                                    Percent
+                                </label>
+                                <div class="col-lg-6 col-md-9 col-sm-12">
+                                    <div class="input-group">
+                                        <input id="percent" type="text" class="form-control @if($errors->has("percent")) is-invalid @endif"
+                                               name="percent"
+                                               value="{{ isset($donation) ? $donation->percent : old('percent') }}">
+                                        @if ($errors->has("percent"))
+                                            <div class="invalid-feedback">{{ $errors->first("percent") }}</div>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="raised" class="col-form-label text-right col-lg-3 col-sm-12">
+                                    Raised
+                                </label>
+                                <div class="col-lg-6 col-md-9 col-sm-12">
+                                    <div class="input-group">
+                                        <input id="raised" type="text" class="form-control @if($errors->has("raised")) is-invalid @endif"
+                                               name="raised"
+                                               value="{{ isset($donation) ? $donation->raised : old('raised') }}">
+                                        @if ($errors->has("raised"))
+                                            <div class="invalid-feedback">{{ $errors->first("raised") }}</div>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="goal" class="col-form-label text-right col-lg-3 col-sm-12">
+                                    Goal
+                                </label>
+                                <div class="col-lg-6 col-md-9 col-sm-12">
+                                    <div class="input-group">
+                                        <input id="goal" type="text" class="form-control @if($errors->has("goal")) is-invalid @endif"
+                                               name="goal"
+                                               value="{{ isset($donation) ? $donation->goal : old('goal') }}">
+                                        @if ($errors->has("goal"))
+                                            <div class="invalid-feedback">{{ $errors->first("goal") }}</div>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+
+
+
                         </div>
                         @include('backend.includes.form.footer')
                     </form>

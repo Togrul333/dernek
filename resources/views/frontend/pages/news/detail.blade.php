@@ -22,7 +22,7 @@
                 <div class="col-xl-8 col-lg-7">
                     <div class="news-details__left">
                         <div class="news-details__img">
-                            <img src="{{asset('frontend/assets/images/blog/news-details-img-1.jpg')}}" alt="">
+                            <img src="{{$news->first_image}}" alt="">
                             <div class="news-details__date-box">
                                 <p>{{\Illuminate\Support\Carbon::parse($news->action_date)->format('d M')}}</p>
                             </div>
@@ -42,7 +42,8 @@
                                 @foreach($some_news as $item)
                                 <li>
                                     <div class="sidebar__post-image">
-                                        <img src="{{asset('frontend/assets/images/blog/lp-1-1.jpg')}}" alt="">
+                                        <img src="{{$item->first_image}}" alt="">
+{{--                                        <img src="{{asset('frontend/assets/images/blog/lp-1-1.jpg')}}" alt="">--}}
                                     </div>
                                     <div class="sidebar__post-content">
                                         <h3>

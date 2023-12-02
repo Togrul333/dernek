@@ -16,51 +16,23 @@
     }}'>
 
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="image-layer"
-                     style="background-image: url({{asset('frontend/assets/images/main-slider/slider-2-1.jpg')}});"></div>
-                <div class="container">
-                    <div class="swiper-slide__inner">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <p>Helping Them Today</p>
-                                <h2>We Can Make <br> A Difference</h2>
-                                <a href="" class="thm-btn">Learn More</a>
+            @foreach($sliders->where('show_on_home',1) as $slider)
+                <div class="swiper-slide">
+                    <div class="image-layer"
+                         style="background-image: url({{$slider->first_image}});"></div>
+                    <div class="container">
+                        <div class="swiper-slide__inner">
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <p>{{translation($slider)->name}}</p>
+                                    <h2>{!! translation($slider)->text !!}</h2>
+                                    <a href="{{route('frontend.news')}}" class="thm-btn">Learn More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="image-layer"
-                     style="background-image: url({{asset('frontend/assets/images/main-slider/slider-2-2.jpg')}});"></div>
-                <div class="container">
-                    <div class="swiper-slide__inner">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <p>Helping Them Today</p>
-                                <h2>We Can Make <br> A Difference</h2>
-                                <a href="" class="thm-btn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="image-layer"
-                     style="background-image: url({{asset('frontend/assets/images/main-slider/slider-2-1.jpg')}});"></div>
-                <div class="container">
-                    <div class="swiper-slide__inner">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <p>Helping Them Today</p>
-                                <h2>We Can Make <br> A Difference</h2>
-                                <a href="" class="thm-btn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="swiper-pagination" id="main-slider-pagination"></div>
     </div>

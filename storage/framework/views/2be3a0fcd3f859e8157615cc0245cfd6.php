@@ -19,74 +19,26 @@
                     }
                 }}'>
             <div class="swiper-wrapper">
+                <?php $__currentLoopData = $sliders->where('show_on_home',0); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slider): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="swiper-slide">
                     <div class="gallery-tow__single">
                         <div class="gallery-tow__img">
-                            <img src="<?php echo e(asset('frontend/assets/images/gallery/gallery-two-img-1.jpg')); ?>" alt="">
+                            <img src="<?php echo e($slider->first_image); ?>" alt="">
                             <div class="gallery-two__hover">
-                                <h2>Small Help</h2>
-                                <ul class="list-unstyled">
-                                    <li><a href="event-details.html">Charity</a></li>
-                                    <li><span>/</span></li>
-                                    <li><a href="event-details.html">Donation</a></li>
-                                </ul>
-                                <a href="<?php echo e(asset('frontend/assets/images/gallery/gallery-two-img-1.jpg')); ?>" class="img-popup"><i
+                                <h2><?php echo e(translation($slider)->name); ?></h2>
+                                <h2><?php echo e(translation($slider)->text); ?></h2>
+
+
+
+
+
+                                <a href="<?php echo e($slider->first_image); ?>" class="img-popup"><i
                                         class="fa fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="gallery-tow__single">
-                        <div class="gallery-tow__img">
-                            <img src="<?php echo e(asset('frontend/assets/images/gallery/gallery-two-img-2.jpg')); ?>" alt="">
-                            <div class="gallery-two__hover">
-                                <h2>Small Help</h2>
-                                <ul class="list-unstyled">
-                                    <li><a href="event-details.html">Charity</a></li>
-                                    <li><span>/</span></li>
-                                    <li><a href="event-details.html">Donation</a></li>
-                                </ul>
-                                <a href="<?php echo e(asset('frontend/assets/images/gallery/gallery-two-img-2.jpg')); ?>" class="img-popup"><i
-                                        class="fa fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="gallery-tow__single">
-                        <div class="gallery-tow__img">
-                            <img src="<?php echo e(asset('frontend/assets/images/gallery/gallery-two-img-3.jpg')); ?>" alt="">
-                            <div class="gallery-two__hover">
-                                <h2>Small Help</h2>
-                                <ul class="list-unstyled">
-                                    <li><a href="event-details.html">Charity</a></li>
-                                    <li><span>/</span></li>
-                                    <li><a href="event-details.html">Donation</a></li>
-                                </ul>
-                                <a href="<?php echo e(asset('frontend/assets/images/gallery/gallery-two-img-3.jpg')); ?>" class="img-popup"><i
-                                        class="fa fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="gallery-tow__single">
-                        <div class="gallery-tow__img">
-                            <img src="<?php echo e(asset('frontend/assets/images/gallery/gallery-two-img-4.jpg')); ?>" alt="">
-                            <div class="gallery-two__hover">
-                                <h2>Small Help</h2>
-                                <ul class="list-unstyled">
-                                    <li><a href="event-details.html">Charity</a></li>
-                                    <li><span>/</span></li>
-                                    <li><a href="event-details.html">Donation</a></li>
-                                </ul>
-                                <a href="<?php echo e(asset('frontend/assets/images/gallery/gallery-two-img-4.jpg')); ?>" class="img-popup"><i
-                                        class="fa fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
     </div>

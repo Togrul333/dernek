@@ -67,6 +67,45 @@ class SettingSeeder extends Seeder
                     'content' => 'Lorem ipsum dolor sit ame consect etur pisicing
                             elit sed do eiusmod tempor incididunt ut labore.'
                 ],
+
+                [
+                    'name' => 'successful_campaigns',
+                    'content' => 'Successful Campaigns'
+                ],
+                [
+                    'name' => 'successful_campaigns_number',
+                    'content' => '4850'
+                ],
+
+
+                [
+                    'name' => 'raised_funds',
+                    'content' => 'Raised Funds'
+                ],
+                [
+                    'name' => 'raised_funds_number',
+                    'content' => '3456'
+                ],
+
+                [
+                    'name' => 'satisfied_donors',
+                    'content' => 'Satisfied Donors'
+                ],
+                [
+                    'name' => 'satisfied_donors_number',
+                    'content' => '2060'
+                ],
+
+
+                [
+                    'name' => 'best_volunteers',
+                    'content' => 'Best Volunteers'
+                ],
+                [
+                    'name' => 'best_volunteers_number',
+                    'content' => '3456'
+                ],
+
             ];
 
             foreach ($settings as $item) {

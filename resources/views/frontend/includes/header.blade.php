@@ -56,13 +56,17 @@
 {{--                                    <li><a href="index3.html">Home 03</a></li>--}}
 {{--                                </ul>--}}
                             </li>
-                            <li class="dropdown ">
-                                <a href="#">Pages</a>
-                                <ul>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="volunteer.html">Volunteers</a></li>
-                                </ul>
-                            </li>
+
+
+{{--                            <li class="dropdown ">--}}
+{{--                                <a href="#">Pages</a>--}}
+{{--                                <ul>--}}
+{{--                                    <li><a href="about.html">About</a></li>--}}
+{{--                                    <li><a href="volunteer.html">Volunteers</a></li>--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
+
+
                             <li class="dropdown {{ url()->current() == route('frontend.donations') ? 'current' : '' }}">
                                 <a href="{{route('frontend.donations')}}">Donations</a>
 {{--                                <ul>--}}
@@ -97,7 +101,7 @@
                         </div>
 
                         <div class="main-nav__right__btn-one">
-                            <a href="campaigns.html"><i class="fas fa-heart"></i>Donate</a>
+                            <a href=""><i class="fas fa-heart"></i>Donate</a>
                         </div>
                     </div>
                 </div>

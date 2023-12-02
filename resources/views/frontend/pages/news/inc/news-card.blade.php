@@ -2,7 +2,7 @@
     <div class="news-one__single">
         <div class="news-one__img">
             <div class="news-one__img-box">
-                <img src="{{asset('frontend/assets/images/resources/popular-causes-3-img-1.jpg')}}" alt="">
+                <img src="{{$news->first_image}}" alt="">
                 <a href="{{route('frontend.news.detail',['news'=>$news])}}"></a>
             </div>
             <div class="news-one__date-box">

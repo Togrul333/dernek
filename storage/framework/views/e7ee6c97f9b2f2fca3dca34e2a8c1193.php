@@ -6,29 +6,29 @@
                 <div class="counter-one__icon">
                     <i class="icon-campaign"></i>
                 </div>
-                <h3 class="counter">4850</h3>
-                <p class="counter-one__text">Successful Campaigns</p>
+                <h3 class="counter"><?php echo settings('successful_campaigns_number'); ?></h3>
+                <p class="counter-one__text"><?php echo settings('successful_campaigns'); ?></p>
             </li>
             <li class="counter-one__single wow fadeInLeft" data-wow-delay="200ms">
                 <div class="counter-one__icon">
                     <i class="icon-budget"></i>
                 </div>
-                <h3 class="counter">3456</h3>
-                <p class="counter-one__text">Raised Funds</p>
+                <h3 class="counter"><?php echo settings('raised_funds_number'); ?></h3>
+                <p class="counter-one__text"><?php echo settings('raised_funds'); ?></p>
             </li>
             <li class="counter-one__single wow fadeInLeft" data-wow-delay="300ms">
                 <div class="counter-one__icon">
                     <i class="icon-social-campaign"></i>
                 </div>
-                <h3 class="counter">460</h3>
-                <p class="counter-one__text">Satisfied Donors</p>
+                <h3 class="counter"><?php echo settings('satisfied_donors_number'); ?></h3>
+                <p class="counter-one__text"><?php echo settings('satisfied_donors'); ?></p>
             </li>
             <li class="counter-one__single wow fadeInLeft" data-wow-delay="400ms">
                 <div class="counter-one__icon">
                     <i class="icon-help"></i>
                 </div>
-                <h3 class="counter">2060</h3>
-                <p class="counter-one__text">Best Volunteers</p>
+                <h3 class="counter"><?php echo settings('best_volunteers_number'); ?></h3>
+                <p class="counter-one__text"><?php echo settings('best_volunteers'); ?></p>
             </li>
         </ul>
     </div>

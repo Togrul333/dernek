@@ -108,17 +108,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="type" class="col-form-label text-right col-lg-3 col-sm-12">
-                                     Tipi
-                                </label>
-                                <div class="col-lg-6 col-md-9 col-sm-12">
-                                    <select class="form-control" name="type" id="type">
-                                        <option value="desktop" {{ isset($slider) && $slider->type == 'desktop' ? 'selected' : ''  }}>Desktop</option>
-                                        <option value="mobile" {{ isset($slider) && $slider->type == 'mobile' ? 'selected' : ''  }}>Mobil</option>
-                                    </select>
-                                </div>
-                            </div>
+{{--                            <div class="form-group row">--}}
+{{--                                <label for="type" class="col-form-label text-right col-lg-3 col-sm-12">--}}
+{{--                                     Tipi--}}
+{{--                                </label>--}}
+{{--                                <div class="col-lg-6 col-md-9 col-sm-12">--}}
+{{--                                    <select class="form-control" name="type" id="type">--}}
+{{--                                        <option value="desktop" {{ isset($slider) && $slider->type == 'desktop' ? 'selected' : ''  }}>Desktop</option>--}}
+{{--                                        <option value="mobile" {{ isset($slider) && $slider->type == 'mobile' ? 'selected' : ''  }}>Mobil</option>--}}
+{{--                                    </select>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                             <div class="form-group row">
                                 <label for="order" class="col-form-label text-right col-lg-3 col-sm-12">
                                     Sıra
@@ -142,6 +142,23 @@
                                          <span class="switch switch-md switch-icon">
                                              <label>
                                                  <input type="checkbox" class="bool" name="status" value="{{ isset($slider) ? $slider->status : old('status') }}"  {{ (isset($slider) ? old('status',$slider->status) : old('status',1) ) == 1 ? 'checked' : '' }}>
+                                                 <span></span>
+                                             </label>
+                                         </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-form-label text-right col-lg-3 col-sm-12">
+                                    ShowOnHome
+                                </label>
+                                <div class="col-lg-6 col-md-9 col-sm-12">
+                                    <div class="input-group">
+                                         <span class="switch switch-md switch-icon">
+                                             <label>
+                                                 <input type="checkbox" class="bool" name="show_on_home"
+                                                        value="{{ isset($slider) ? $slider->show_on_home : old('show_on_home') }}"
+                                                     {{ (isset($slider) ? old('show_on_home',$slider->show_on_home) : old('show_on_home',1) ) == 1 ? 'checked' : '' }}>
                                                  <span></span>
                                              </label>
                                          </span>

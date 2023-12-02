@@ -23,18 +23,18 @@
                     <div class="campaign-details__left-bar">
                         <div class="campaign-details__img">
                             <div class="campaign-details__img-box">
-                                <img src="{{asset('frontend/assets/images/resources/campaign-details-img-1.jpg')}}" alt="">
+                                <img src="{{$donation->first_image}}" alt="">
                                 <div class="campaign-details__category">
-                                    <p>Food</p>
+{{--                                    <p>Food</p>--}}
                                 </div>
                             </div>
                             <div class="campaign-details__progress">
                                 <div class="bar">
-                                    <div class="bar-inner count-bar" data-percent="36%"><div class="count-text">36%</div></div>
+                                    <div class="bar-inner count-bar" data-percent="36%"><div class="count-text">{{$donation->percent}}%</div></div>
                                 </div>
                                 <div class="campaign-details__goals">
-                                    <p><span>$25,270</span> Raised</p>
-                                    <p><span>$30,000</span> Goal</p>
+                                    <p><span>{{$donation->raised}}</span> Raised</p>
+                                    <p><span>${{$donation->goal}}</span> Goal</p>
                                 </div>
                             </div>
                         </div>
@@ -53,9 +53,14 @@
                             <ul class="list-unstyled campaign-details__donations-list">
                                 @foreach($some_donations as $some_donation)
                                 <li>
-                                    <div class="campaign-details__donations-img">
-                                        <img src="{{asset('frontend/assets/images/resources/recent-donation-img-1.jpg')}}" alt="">
+                                    <div class="sidebar__post-image">
+                                           <img src="{{$some_donation->first_image}}" alt="">
+{{--                                        <img src="{{asset('frontend/assets/images/resources/recent-donation-img-1.jpg')}}" alt="">--}}
                                     </div>
+{{--                                    <div class="campaign-details__donations-img">--}}
+{{--                                        <img src="{{$some_donation->first_image}}" alt="">--}}
+{{--                                        <img src="{{asset('frontend/assets/images/resources/recent-donation-img-1.jpg')}}" alt="">--}}
+{{--                                    </div>--}}
                                     <div class="campaign-details__donations-content">
                                         <p>{{\Illuminate\Support\Str::limit($some_donation->translate(locale())->title,20)}}</p>
                                     </div>

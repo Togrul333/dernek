@@ -658,3 +658,10 @@ if (!function_exists('settings')) {
         return $return;
     }
 }
+
+if (!function_exists('translation')) {
+    function translation($model)
+    {
+        return $model?->translations->where('locale', locale())->first();
+    }
+}

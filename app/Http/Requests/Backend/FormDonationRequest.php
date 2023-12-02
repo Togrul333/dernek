@@ -41,6 +41,9 @@ class FormDonationRequest extends FormRequest
             'image' => 'required',
             'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'order' => ['nullable'],
+            'percent' => ['nullable'],
+            'raised' => ['nullable'],
+            'goal' => ['nullable'],
         ];
 
         // For Update

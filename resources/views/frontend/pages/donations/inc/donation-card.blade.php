@@ -1,9 +1,9 @@
 <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
     <div class="popular-causes__sinlge">
         <div class="popular-causes__img">
-            <img src="{{asset('frontend/assets/images/resources/popular-causes-3-img-1.jpg')}}" alt="">
+            <img src="{{$donation->first_image}}" alt="">
             <div class="popular-causes__category">
-                <p>Food</p>
+{{--                <p>Food</p>--}}
             </div>
         </div>
         <div class="popular-causes__content">
@@ -17,12 +17,12 @@
             <div class="popular-causes__progress">
                 <div class="bar">
                     <div class="bar-inner count-bar" data-percent="36%">
-                        <div class="count-text">36%</div>
+                        <div class="count-text">{{$donation->percent}}%</div>
                     </div>
                 </div>
                 <div class="popular-causes__goals">
-                    <p><span>$25,270</span> Raised</p>
-                    <p><span>$30,000</span> Goal</p>
+                    <p><span>${{$donation->raised}}</span> Raised</p>
+                    <p><span>${{$donation->goal}}</span> Goal</p>
                 </div>
             </div>
         </div>

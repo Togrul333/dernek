@@ -14,7 +14,7 @@ class News extends Model
 
     protected $guarded = [];
 
-    public $with = ['translation'];
+    public $with = ['translation','translations'];
 
     public function translations()
     {
