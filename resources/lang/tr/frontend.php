@@ -31,7 +31,7 @@ return array(
 
             'explore'=>'Keşfet',
             'support'=>'Destek',
-            'copyright'=>'© Copyright 2023 by Hedef Derneği 2023',
+            'copyright'=>'© Copyright  2023',
             'general_donation'=>'Genel Bağış',
 
 
