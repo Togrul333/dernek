@@ -22,8 +22,8 @@ class LanguageTableSeeder extends Seeder
             0 =>
             array (
                 'id' => 1,
-                'name' => 'Azerbaijan',
-                'code' => 'az',
+                'name' => 'Türkçe',
+                'code' => 'tr',
                 'default' => 1,
                 'status' => 1,
                 'created_at' => '2022-04-12 20:10:16',
@@ -45,17 +45,17 @@ class LanguageTableSeeder extends Seeder
                 'name' => 'Русский',
                 'code' => 'ru',
                 'default' => 0,
-                'status' => 0,
+                'status' => 1,
                 'created_at' => '2022-04-12 20:38:46',
                 'updated_at' => '2022-04-12 20:39:06',
             ),
             3 =>
                 array (
                     'id' => 4,
-                    'name' => 'Türkçe',
-                    'code' => 'tr',
+                    'name' => 'Azerbaijan',
+                    'code' => 'az',
                     'default' => 0,
-                    'status' => 0,
+                    'status' => 1,
                     'created_at' => '2022-04-12 20:38:46',
                     'updated_at' => '2022-04-12 20:39:06',
                 ),

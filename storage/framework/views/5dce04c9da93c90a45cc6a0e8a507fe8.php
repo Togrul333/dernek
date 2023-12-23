@@ -5,7 +5,7 @@
                 <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                     <div class="footer-widget__column footer-widget__about">
                         <div class="footer-widget__logo">
-                            <a href=""><img src="<?php echo e(asset('frontend/assets/images/resources/footer-logo.png')); ?>" alt=""></a>
+                            <a href=""><img src="<?php echo e(asset('frontend/assets/images/logo_xazar.png')); ?>" alt=""></a>
                         </div>
                         <p class="footer-widget__text"><?php echo settings('footer_text'); ?></p>
                         <div class="site-footer__social">
@@ -70,7 +70,7 @@
                         <h3 class="footer-widget__title">Support</h3>
                         <p class="footer-widget__support-text"><?php echo settings('footer_support_text'); ?></p>
                         <div class="footer-widget__support-btn">
-                            <a href=""><i class="fas fa-heart"></i>Donate</a>
+                            <a href="<?php echo e(route('frontend.donate')); ?>"><i class="fas fa-heart"></i>Donate</a>
                         </div>
                     </div>
                 </div>

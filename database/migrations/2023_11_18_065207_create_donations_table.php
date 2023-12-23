@@ -16,6 +16,7 @@ return new class extends Migration
             $table->integer('order')->unsigned()->nullable();
             $table->string('donation_type')->nullable();
             $table->string('percent')->nullable();
+            $table->double('price', 15, 2)->nullable();
             $table->string('raised')->nullable();
             $table->string('goal')->nullable();
             $table->enum('status',['1','0'])->default('1');

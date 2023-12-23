@@ -156,6 +156,21 @@
                             </div>
 
                             <div class="form-group row">
+                                <label for="price" class="col-form-label text-right col-lg-3 col-sm-12">
+                                    Price
+                                </label>
+                                <div class="col-lg-6 col-md-9 col-sm-12">
+                                    <div class="input-group">
+                                        <input id="price" type="text" class="form-control @if($errors->has("price")) is-invalid @endif"
+                                               name="price"
+                                               value="{{ isset($donation) ? $donation->price : old('price') }}">
+                                        @if ($errors->has("price"))
+                                            <div class="invalid-feedback">{{ $errors->first("price") }}</div>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label for="percent" class="col-form-label text-right col-lg-3 col-sm-12">
                                     Percent
                                 </label>

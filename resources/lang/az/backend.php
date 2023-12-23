@@ -302,6 +302,8 @@ return array(
     'titles' =>
         array(
             '$page' => '',
+            'volunteers' => 'Gönüllüler',
+
             404 => 'Səhifə tapılmadı',
             'about-block' => '',
             'admins' => 'İdarəçilər',

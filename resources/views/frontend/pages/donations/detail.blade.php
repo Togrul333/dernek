@@ -28,15 +28,15 @@
 {{--                                    <p>Food</p>--}}
                                 </div>
                             </div>
-                            <div class="campaign-details__progress">
-                                <div class="bar">
-                                    <div class="bar-inner count-bar" data-percent="36%"><div class="count-text">{{$donation->percent}}%</div></div>
-                                </div>
-                                <div class="campaign-details__goals">
-                                    <p><span>{{$donation->raised}}</span> Raised</p>
-                                    <p><span>${{$donation->goal}}</span> Goal</p>
-                                </div>
-                            </div>
+{{--                            <div class="campaign-details__progress">--}}
+{{--                                <div class="bar">--}}
+{{--                                    <div class="bar-inner count-bar" data-percent="36%"><div class="count-text">{{$donation->percent}}%</div></div>--}}
+{{--                                </div>--}}
+{{--                                <div class="campaign-details__goals">--}}
+{{--                                    <p><span>{{$donation->raised}}</span> Raised</p>--}}
+{{--                                    <p><span>${{$donation->goal}}</span> Goal</p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                         </div>
                         <div class="campaign-details__text-box">
                             <h3>{{$donation->translate(locale())->title}}</h3>

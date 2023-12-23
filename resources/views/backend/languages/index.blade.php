@@ -9,7 +9,11 @@
         <div class="d-flex flex-column-fluid">
             <div class="container">
                 <div class="card card-custom">
-                    @include('backend.includes.card.header', ['page' => 'languages'])
+                    <div class="card-header flex-wrap py-5">
+                        <div class="card-title">
+                            <h3 class="card-label">@lang("backend.titles.languages")</h3>
+                        </div>
+                    </div>
                     @include('backend.languages.tables.index')
                 </div>
             </div>

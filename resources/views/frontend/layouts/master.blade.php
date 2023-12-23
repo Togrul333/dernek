@@ -30,7 +30,7 @@
                 <i class="fa fa-times"></i>
             </span>
         <div class="logo-box">
-            <a href="index.html" aria-label="logo image">
+            <a href="" aria-label="logo image">
                 <img src="{{asset('frontend/assets/images/resources/logo-2.png')}}" alt=""/>
             </a>
         </div>

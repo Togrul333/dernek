@@ -13,10 +13,10 @@ class SettingSeeder extends Seeder
         activity()->withoutLogs(function () {
 
             $settings = [
-                [
-                    'name' => 'logo',
-                    'content' => 'http://shop.globalsoft.az/frontend/img/logo.png'
-                ],
+//                [
+//                    'name' => 'logo',
+//                    'content' => 'http://shop.globalsoft.az/frontend/img/logo.png'
+//                ],
                 [
                     'name' => 'location',
                     'content' => '75 Albert Buildings 494 Queen Victoria Street London, EC4N 4SA United Kingdom'
@@ -117,12 +117,24 @@ class SettingSeeder extends Seeder
                         'content' => $item['content'],
                         'locale' => 'az'
                     ]);
+                SettingTranslation::create(
+                    [
+                        'setting_id' => $setting->id,
+                        'content' => $item['content'],
+                        'locale' => 'ru'
+                    ]);
 
                 SettingTranslation::create(
                     [
                         'setting_id' => $setting->id,
                         'content' => $item['content'],
                         'locale' => 'en'
+                    ]);
+                SettingTranslation::create(
+                    [
+                        'setting_id' => $setting->id,
+                        'content' => $item['content'],
+                        'locale' => 'tr'
                     ]);
             }
         });

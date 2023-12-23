@@ -49,6 +49,7 @@ class DonationController extends Controller
             $news = Donation::create([
                 'order' => $data['order'],
                 'percent' => $data['percent'],
+                'price' => $data['price'],
                 'raised' => $data['raised'],
                 'goal' => $data['goal'],
             ]);
@@ -98,6 +99,7 @@ class DonationController extends Controller
                 'percent' => $data['percent'],
                 'raised' => $data['raised'],
                 'goal' => $data['goal'],
+                'price' => $data['price'],
             ]);
             foreach (Cache::get('active_langs') as $lang) {
                 $donation->translations()->updateOrcreate(

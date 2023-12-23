@@ -291,6 +291,7 @@ return array(
             '$page' => '',
             404 => 'Səhifə tapılmadı',
             'about-block' => '',
+            'volunteers' => 'Gönüllüler',
             'admins' => 'İdarəçilər',
             'advantages' => 'Üstünlüklər',
             'attribute-groups' => 'Attribut qrupları',

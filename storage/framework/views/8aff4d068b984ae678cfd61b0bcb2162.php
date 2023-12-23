@@ -177,7 +177,7 @@ unset($__errorArgs, $__bag); ?>
                             </div>
                             <div class="form-group row">
                                 <label class="col-form-label text-right col-lg-3 col-sm-12">
-                                    ShowOnHome
+                                    Ana Sayfada Göster
                                 </label>
                                 <div class="col-lg-6 col-md-9 col-sm-12">
                                     <div class="input-group">

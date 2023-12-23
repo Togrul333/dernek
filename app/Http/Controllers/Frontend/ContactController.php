@@ -35,7 +35,7 @@ class ContactController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => '',
-                'message' => 'Your request has been sent'
+                'message' => 'talebiniz gönderildi'
             ]);
         } catch (\Exception $e) {
             Log::channel('frontend')->error($e->getMessage());

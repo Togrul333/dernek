@@ -3,7 +3,7 @@
 
         <div class="site-header__logo-box float-left">
             <div class="site-header__logo">
-                <a href=""><img src="{{asset('frontend/assets/images/resources/logo.png')}}" alt=""></a>
+                <a href="{{route('frontend.dashboard')}}"><img src="{{asset('frontend/assets/images/logo_xazar.png')}}" alt=""></a>
             </div>
         </div>
 
@@ -89,12 +89,23 @@
                                 <li class="{{ url()->current() == route('frontend.contact') ? 'current' : '' }}">
                                     <a href="{{route('frontend.contact')}}">Contact</a>
                                 </li>
+                                <li class="{{ url()->current() == route('frontend.volunteer') ? 'current' : '' }}">
+                                    <a href="{{route('frontend.volunteer')}}">Gönüllü ol</a>
+                                </li>
+                                <li class="dropdown ">
+                                    <a href="">language</a>
+                                    <ul>
+                                        @foreach($langs as $lang)
+                                            <li><a href="{{ route('frontend.lang.switch', $lang->code) }}">{{$lang->name}}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <div class="main-nav__right main-nav__right-one float-right">
                         <div class="main-nav__right__btn-one">
-                            <a href="campaigns.html"><i class="fas fa-heart"></i>Donate</a>
+                            <a href="{{route('frontend.donate')}}"><i class="fas fa-heart"></i>Donate</a>
                         </div>
 {{--                        <div class="main-nav__right__icon-cart-box">--}}
 {{--                            <a href="#">--}}

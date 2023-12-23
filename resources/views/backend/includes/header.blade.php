@@ -13,20 +13,31 @@
         </div>
         <div class="topbar">
             <div class="dropdown">
-                <div class="topbar-item" data-offset="10px,0px">
-                    <a href="javascript:void(0);" class="btn btn-icon btn-clean btn-dropdown btn-lg"
+                <div class="dropdown">
+                    <div class="topbar-item" data-offset="10px,0px">
+                        <a href="javascript:void(0);" class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1" onclick="event.preventDefault(); document.getElementById('lang').submit();">
+                            <img src="{{  app()->getLocale() == 'tr' ? asset('backend/svg/Ottoman_flag.svg.png') :  asset('backend/svg/en.svg') }}" class="h-20px w-20px rounded-sm">
+                        </a>
+                        <form action="{{ route('backend.lang') }}" method="POST" id="lang">
+                            @csrf
+                            @method('PATCH')
+                        </form>
+                    </div>
+                </div>
+{{--                <div class="topbar-item" data-offset="10px,0px">--}}
+{{--                    <a href="javascript:void(0);" class="btn btn-icon btn-clean btn-dropdown btn-lg"--}}
 {{--                       onclick="event.preventDefault(); document.getElementById('lang').submit();"--}}
-                    >
-                        <img src="{{  asset('backend/svg/az.svg') }}" class="h-20px w-20px rounded-sm" alt="Az">
-                    </a>
-                </div>
-                <div class="topbar-item" data-offset="10px,0px">
-                    <a href="javascript:void(0);" class="btn btn-icon btn-clean btn-dropdown btn-lg"
-                        {{--                       onclick="event.preventDefault(); document.getElementById('lang').submit();"--}}
-                    >
-                        <img src="{{  asset('backend/svg/Ottoman_flag.svg.png') }}" class="h-20px w-20px rounded-sm" alt="Az">
-                    </a>
-                </div>
+{{--                    >--}}
+{{--                        <img src="{{  asset('backend/svg/az.svg') }}" class="h-20px w-20px rounded-sm" alt="Az">--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--                <div class="topbar-item" data-offset="10px,0px">--}}
+{{--                    <a href="javascript:void(0);" class="btn btn-icon btn-clean btn-dropdown btn-lg"--}}
+{{--                        --}}{{--                       onclick="event.preventDefault(); document.getElementById('lang').submit();"--}}
+{{--                    >--}}
+{{--                        <img src="{{  asset('backend/svg/Ottoman_flag.svg.png') }}" class="h-20px w-20px rounded-sm" alt="Az">--}}
+{{--                    </a>--}}
+{{--                </div>--}}
             </div>
             <div class="topbar-item">
                 <div class="btn btn-icon btn-icon-mobile w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">

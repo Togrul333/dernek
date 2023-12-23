@@ -10,7 +10,7 @@ $(function () {
         var message = $('#message').val();
 
         if (name == "" || email == "" || phone == "" || subject == "" || message == "") {
-            toastr.error('All fields must be filled in');
+            toastr.error('Tüm alanlar doldurulmalıdır');
         } else {
 
             var data = new FormData(this);

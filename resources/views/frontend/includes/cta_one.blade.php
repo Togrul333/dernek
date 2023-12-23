@@ -1,4 +1,4 @@
-<section class="cta-one" style="background-image: url({{asset('frontend/assets/images/backgrounds/cta-one-bg.jpg')}})">
+<section class="cta-one" style="background-image: url({{asset('frontend/assets/images/cocuk.jpg')}})">z
     <div class="container">
         <div class="row">
             <div class="col-xl-12">

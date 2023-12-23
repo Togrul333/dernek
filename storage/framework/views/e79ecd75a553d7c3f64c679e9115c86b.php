@@ -16,107 +16,26 @@
                             </div>
                         </div>
                         <div class="popular-causes__content">
-                            <div class="popular-causes__title">
+                            <div class="popular-causes__title" style="">
                                 <h3><a href="<?php echo e(route('frontend.donations.detail',['donation'=>$donation])); ?>"
                                     ><?php echo e(\Illuminate\Support\Str::limit($donation->translate(locale())->title,30)); ?></a></h3>
                                 <p><?php echo e(\Illuminate\Support\Str::limit($donation->translate(locale())->content,100)); ?></p>
                             </div>
-                            <div class="popular-causes__progress">
-                                <div class="bar">
-                                    <div class="bar-inner count-bar" data-percent="36%">
-                                        <div class="count-text"><?php echo e($donation->percent); ?>%</div>
-                                    </div>
-                                </div>
-                                <div class="popular-causes__goals">
-                                    <p><span>$<?php echo e($donation->raised); ?></span> Raised</p>
-                                    <p><span>$<?php echo e($donation->goal); ?></span> Goal</p>
-                                </div>
-                            </div>
+
+
+
+
+
+
+
+
+
+
+
                         </div>
                     </div>
                 </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
         </div>
     </div>
 </section>

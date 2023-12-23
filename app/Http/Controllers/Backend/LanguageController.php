@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\FormLanguageRequest;
-use App\Interfaces\DatatableInterface;
 use App\Models\Language;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Log;
@@ -105,17 +104,17 @@ class LanguageController extends Controller
         $class  = 'btn btn-sm btn-icon btn-clean';
         $result = '';
 
-        if (admin()->can('languages edit'))
-        {
-            $result .= "<a href='" . route('backend.languages.edit', ['language' => $id]) . "'";
-            $result .= " class='$class'><i class='la la-edit'></i></a>";
-        }
-
-        if (admin()->can('languages delete'))
-        {
-            $result .= "<a href='" . route('backend.languages.destroy', ['language' => $id]) . "'";
-            $result .= " class='$class btn-delete'><i class='la la-trash'></i></a>";
-        }
+//        if (admin()->can('languages edit'))
+//        {
+//            $result .= "<a href='" . route('backend.languages.edit', ['language' => $id]) . "'";
+//            $result .= " class='$class'><i class='la la-edit'></i></a>";
+//        }
+//
+//        if (admin()->can('languages delete'))
+//        {
+//            $result .= "<a href='" . route('backend.languages.destroy', ['language' => $id]) . "'";
+//            $result .= " class='$class btn-delete'><i class='la la-trash'></i></a>";
+//        }
 
         return $result;
     }

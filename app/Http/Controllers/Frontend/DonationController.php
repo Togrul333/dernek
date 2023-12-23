@@ -12,6 +12,16 @@ class DonationController extends Controller
         $donations = Donation::get();
         return view('frontend.pages.donations.index',compact('donations'));
     }
+    public function donate()
+    {
+        $donations = Donation::get();
+        return view('frontend.pages.donations.index_2',compact('donations'));
+    }
+    public function makeDonate(Donation $donation)
+    {
+        $donations = Donation::get();
+        return view('frontend.pages.donations.index',compact('donations'));
+    }
     public function detail($donationSlug)
     {
         $donation = Donation::active()->whereHas('translation', function ($query) use ($donationSlug) {

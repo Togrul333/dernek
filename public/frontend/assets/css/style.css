@@ -49,9 +49,12 @@ font-family: 'Rubik', sans-serif;
     --thm-font: 'Rubik', sans-serif;
     --thm-font-shadows: 'Shadows Into Light', cursive;
     --thm-font-abril: 'Abril Fatface', cursive;
-    --thm-base: #ff9d00;
+    /*--thm-base: #ff9d00;*/
+    /*--thm-base: #007bff;*/
+    --thm-base: #5b8ec2;
     --thm-base-rgb: 257, 155, 0;
-    --thm-primary: #ff6d12;
+    /*--thm-primary: #ff6d12;*/
+    --thm-primary: #5b8ec2;
     --thm-primary-rgb: 255, 109, 18;
     --thm-black: #2c2734;
     --thm-black-rgb: 44, 39, 52;
@@ -2414,8 +2417,8 @@ li {
     position: relative;
     display: block;
     padding: 0 40px 24px;
-    border-bottom: 1px solid #eae5e3;
-    margin-bottom: 50px;
+    /*border-bottom: 1px solid #eae5e3;*/
+    /*margin-bottom: 50px;*/
 }
 
 .popular-causes__title h3 {

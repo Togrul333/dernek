@@ -6,7 +6,7 @@
     @include('frontend.includes.main-slider-section')
 {{--    @include('frontend.includes.give_helping')--}}
     @include('frontend.includes.popular_causes')
-{{--    @include('frontend.includes.you_can_help')--}}
+    @include('frontend.includes.you_can_help')
     @include('frontend.includes.counter_one')
 {{--    @include('frontend.includes.charity_activity')--}}
 {{--    @include('frontend.includes.meet_volunteers_one')--}}

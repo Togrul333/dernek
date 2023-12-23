@@ -28,6 +28,7 @@ class DonatesSeeder extends Seeder
         $langs = Language::get();
         $donation = Donation::create([
             'id' => 1,
+            'price' => 250,
             'percent' => 30,
             'raised' => 300,
             'goal' => 1000,
@@ -58,9 +59,10 @@ class DonatesSeeder extends Seeder
                 'slug' => Str::uuid(),
             ]);
         }
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
         $donation = Donation::create([
             'id' => 2,
+            'price' => 560,
             'percent' => 20,
             'raised' => 200,
             'goal' => 1000,
@@ -93,9 +95,11 @@ class DonatesSeeder extends Seeder
             ]);
         }
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
 
         $donation = Donation::create([
             'id' => 3,
+            'price' => 300,
             'percent' => 40,
             'raised' => 400,
             'goal' => 1000,

@@ -19,6 +19,7 @@ use \App\Http\Controllers\Backend\LogController;
 use \App\Http\Controllers\Backend\NewsController;
 use \App\Http\Controllers\Backend\DonationController;
 use \App\Http\Controllers\Backend\ContactController;
+use \App\Http\Controllers\Backend\VolunteerController;
 
 Route::fallback(function () {
     return view('backend.errors.404');
@@ -56,6 +57,8 @@ Route::group(['middleware' => ['auth:admin']], function () {
     //contacts
     Route::resource('/contacts', ContactController::class);
 
+    //volunteers
+    Route::resource('/volunteers',  VolunteerController::class);
 
     Route::post('/documents/{document}/delete', [\App\Http\Controllers\Backend\DocumentsController::class, 'deleteDocument'])->name('delete.document');
 

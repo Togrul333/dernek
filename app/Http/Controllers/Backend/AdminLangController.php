@@ -13,7 +13,7 @@ class AdminLangController extends Controller
     {
         try
         {
-            $code = app()->getLocale() == 'az' ? 'en' : 'az';
+            $code = app()->getLocale() == 'tr' ? 'en' : 'tr';
 
             app()->setlocale($code);
             Session::put('locale', $code);

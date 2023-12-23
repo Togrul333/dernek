@@ -3,7 +3,7 @@
 
         <div class="site-header__logo-box float-left">
             <div class="site-header__logo">
-                <a href=""><img src="<?php echo e(asset('frontend/assets/images/resources/logo.png')); ?>" alt=""></a>
+                <a href="<?php echo e(route('frontend.dashboard')); ?>"><img src="<?php echo e(asset('frontend/assets/images/logo_xazar.png')); ?>" alt=""></a>
             </div>
         </div>
 
@@ -89,12 +89,23 @@
                                 <li class="<?php echo e(url()->current() == route('frontend.contact') ? 'current' : ''); ?>">
                                     <a href="<?php echo e(route('frontend.contact')); ?>">Contact</a>
                                 </li>
+                                <li class="<?php echo e(url()->current() == route('frontend.volunteer') ? 'current' : ''); ?>">
+                                    <a href="<?php echo e(route('frontend.volunteer')); ?>">Gönüllü ol</a>
+                                </li>
+                                <li class="dropdown ">
+                                    <a href="">language</a>
+                                    <ul>
+                                        <?php $__currentLoopData = $langs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $lang): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <li><a href="<?php echo e(route('frontend.lang.switch', $lang->code)); ?>"><?php echo e($lang->name); ?></a></li>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <div class="main-nav__right main-nav__right-one float-right">
                         <div class="main-nav__right__btn-one">
-                            <a href="campaigns.html"><i class="fas fa-heart"></i>Donate</a>
+                            <a href="<?php echo e(route('frontend.donate')); ?>"><i class="fas fa-heart"></i>Donate</a>
                         </div>
 
 
