@@ -40,16 +40,6 @@
                 <div class="main-nav__header-two__content-box">
                     <div class="main-nav__left main-nav__left-two">
                         <div class="logo-two">
-                            
-                            
-
-
-
-
-
-
-
-
                             <a href=""><img src="<?php echo e(asset('frontend/assets/images/logo_xazar.png')); ?>" alt=""></a>
 
                         </div>
@@ -60,52 +50,22 @@
                     <div class="main-nav__main-navigation main-nav__main-navigation__two">
                         <ul class=" main-nav__navigation-box ">
                             <li class="dropdown <?php echo e(url()->current() == route('frontend.dashboard') ? 'current' : ''); ?>">
-                                <a href="<?php echo e(route('frontend.dashboard')); ?>">Home</a>
-                                
-                                
-                                
-                                
-                                
+                                <a href="<?php echo e(route('frontend.dashboard')); ?>"><?php echo app('translator')->get('frontend.titles.home'); ?></a>
                             </li>
-
-
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-
-
                             <li class="dropdown <?php echo e(url()->current() == route('frontend.donations') ? 'current' : ''); ?>">
-                                <a href="<?php echo e(route('frontend.donations')); ?>">Donations</a>
-                                
-                                
-                                
-                                
+                                <a href="<?php echo e(route('frontend.donations')); ?>"><?php echo app('translator')->get('frontend.titles.donations'); ?></a>
                             </li>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                             <li class="dropdown <?php echo e(url()->current() == route('frontend.news') ? 'current' : ''); ?>">
-                                <a href="<?php echo e(route('frontend.news')); ?>">News</a>
-                                
-                                
-                                
+                                <a href="<?php echo e(route('frontend.news')); ?>"><?php echo app('translator')->get('frontend.titles.news'); ?></a>
                             </li>
                             <li class=" <?php echo e(url()->current() == route('frontend.contact') ? 'current' : ''); ?>">
-                                <a href="<?php echo e(route('frontend.contact')); ?>">Contact</a>
+                                <a href="<?php echo e(route('frontend.contact')); ?>"><?php echo app('translator')->get('frontend.titles.contact'); ?></a>
                             </li>
                             <li class=" <?php echo e(url()->current() == route('frontend.volunteer') ? 'current' : ''); ?>">
-                                <a href="<?php echo e(route('frontend.volunteer')); ?>">Gönüllü ol</a>
+                                <a href="<?php echo e(route('frontend.volunteer')); ?>"><?php echo app('translator')->get('frontend.titles.volunteer'); ?></a>
                             </li>
                             <li class="dropdown ">
-                                <a href="">language</a>
+                                <a href=""><?php echo app('translator')->get('frontend.titles.language'); ?></a>
                                 <ul>
                                     <?php $__currentLoopData = $langs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $lang): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <li>
@@ -125,7 +85,7 @@
                         </div>
 
                         <div class="main-nav__right__btn-one">
-                            <a href="<?php echo e(route('frontend.donate')); ?>"><i class="fas fa-heart"></i>Donate</a>
+                            <a href="<?php echo e(route('frontend.donate')); ?>"><i class="fas fa-heart"></i><?php echo app('translator')->get('frontend.titles.donate'); ?></a>
                         </div>
                     </div>
                 </div>

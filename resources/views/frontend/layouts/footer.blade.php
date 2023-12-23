@@ -18,25 +18,19 @@
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                     <div class="footer-widget__column footer-widget__explore clearfix">
-                        <h3 class="footer-widget__title">Explore</h3>
+                        <h3 class="footer-widget__title">@lang('frontend.titles.explore')</h3>
                         <ul class="footer-widget__explore-list list-unstyled">
-                            <li><a href="{{route('frontend.donations')}}">Donations</a></li>
-{{--                            <li><a href="{{route('frontend.donations')}}">Campaigns</a></li>--}}
-{{--                            <li><a href="#">Fundraise</a></li>--}}
-{{--                            <li><a href="{{route('frontend.donations')}}">Volunteers</a></li>--}}
-{{--                            <li><a href="#">Sponsors</a></li>--}}
+                            <li><a href="{{route('frontend.donations')}}">@lang('frontend.titles.donations')</a></li>
                         </ul>
                         <ul class="footer-widget__explore-list footer-widget__explore-list-two list-unstyled">
-                            <li><a href="{{route('frontend.news')}}">News</a></li>
-                            <li><a href="{{route('frontend.contact')}}">Contact</a></li>
-{{--                            <li><a href="#">Help</a></li>--}}
-{{--                            <li><a href="#">Faqs</a></li>--}}
+                            <li><a href="{{route('frontend.news')}}">@lang('frontend.titles.news')</a></li>
+                            <li><a href="{{route('frontend.contact')}}">@lang('frontend.titles.contact')</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                     <div class="footer-widget__column footer-widget__contact">
-                        <h3 class="footer-widget__title">Contact</h3>
+                        <h3 class="footer-widget__title">@lang('frontend.titles.contact')</h3>
                         <ul class="list-unstyled footer-widget__contact-list">
                             <li>
                                 <div class="icon">
@@ -67,10 +61,10 @@
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                     <div class="footer-widget__column footer-widget__support">
-                        <h3 class="footer-widget__title">Support</h3>
+                        <h3 class="footer-widget__title">@lang('frontend.titles.support')</h3>
                         <p class="footer-widget__support-text">{!! settings('footer_support_text') !!}</p>
                         <div class="footer-widget__support-btn">
-                            <a href="{{route('frontend.donate')}}"><i class="fas fa-heart"></i>Donate</a>
+                            <a href="{{route('frontend.donate')}}"><i class="fas fa-heart"></i>@lang('frontend.titles.donate')</a>
                         </div>
                     </div>
                 </div>
@@ -85,15 +79,9 @@
             <div class="col-xl-12">
                 <div class="site-footer-bottom__inner">
                     <div class="site-footer-bottom__left">
-                        <p>© Copyright 2023
-{{--                            <a href="#">dfgdgfd.com</a>--}}
+                        <p>@lang('frontend.titles.copyright')
                         </p>
                     </div>
-{{--                    <ul class="site-footer-bottom__menu list-unstyled">--}}
-{{--                        <li><a href="#">Privacy Policy</a></li>--}}
-{{--                        <li><span>/</span></li>--}}
-{{--                        <li><a href="#">Terms of Condition</a></li>--}}
-{{--                    </ul>--}}
                 </div>
             </div>
         </div>

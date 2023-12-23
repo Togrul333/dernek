@@ -5,8 +5,8 @@
             <div class="col-xl-6 col-lg-6">
                 <div class="you-can-help__left">
                     <div class="block-title text-left">
-                        <h4>Help the people</h4>
-                        <h2>You Can Help us to Change One Person Live Through Donation</h2>
+                        <h4>@lang('frontend.titles.help_the_people')</h4>
+                        <h2>@lang('frontend.titles.help_the_people_des')</h2>
                     </div>
                     <div class="you-can-help__three-icon">
                         <ul class="list-unstyled">
@@ -15,7 +15,7 @@
                                     <span class="icon-vegetable"></span>
                                 </div>
                                 <div class="text">
-                                    <p>Food</p>
+                                    <p>@lang("frontend.titles.food")</p>
                                 </div>
                             </li>
                             <li>
@@ -23,7 +23,7 @@
                                     <span class="icon-water-1"></span>
                                 </div>
                                 <div class="text">
-                                    <p>Water</p>
+                                    <p>@lang("frontend.titles.water")</p>
                                 </div>
                             </li>
                             <li>
@@ -31,7 +31,7 @@
                                     <span class="icon-stethoscope"></span>
                                 </div>
                                 <div class="text">
-                                    <p>Medical</p>
+                                    <p>@lang("frontend.titles.medical")</p>
                                 </div>
                             </li>
                         </ul>
@@ -42,7 +42,7 @@
                 <div class="you-can-help__right">
                     <div class="you-can-help__give-box">
                         <div class="you-can-help__give-text-box">
-                            <p>Give Education to Kids</p>
+                            <p>@lang("frontend.titles.give_education_to_kids")</p>
                         </div>
                         <div class="you-can-help__icon-box">
                             <span class="icon-graduated"></span>

@@ -14,7 +14,7 @@
             <div class="news-one__title">
                 <h3><a href="{{route('frontend.news.detail',['news'=>$news])}}">{{$news->translate(locale())->title}}</a></h3>
             </div>
-            <a href="{{route('frontend.news.detail',['news'=>$news])}}" class="thm-btn news-one__btn">More</a>
+            <a href="{{route('frontend.news.detail',['news'=>$news])}}" class="thm-btn news-one__btn">@lang('frontend.titles.more')</a>
         </div>
     </div>
 </div>

@@ -1,9 +1,8 @@
 <section class="popular-causes-two">
     <div class="container">
         <div class="block-title text-center">
-            
             <h4></h4>
-            <h2>Our Popular Causes</h2>
+            <h2><?php echo app('translator')->get('frontend.titles.our_popular_causes'); ?></h2>
         </div>
         <div class="row">
             <?php $__currentLoopData = $donations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $donation): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -12,7 +11,6 @@
                         <div class="popular-causes__img">
                             <img src="<?php echo e($donation->first_image); ?>" alt="">
                             <div class="popular-causes__category">
-                                
                             </div>
                         </div>
                         <div class="popular-causes__content">
@@ -21,17 +19,6 @@
                                     ><?php echo e(\Illuminate\Support\Str::limit($donation->translate(locale())->title,30)); ?></a></h3>
                                 <p><?php echo e(\Illuminate\Support\Str::limit($donation->translate(locale())->content,100)); ?></p>
                             </div>
-
-
-
-
-
-
-
-
-
-
-
                         </div>
                     </div>
                 </div>

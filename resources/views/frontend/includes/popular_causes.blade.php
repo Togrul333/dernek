@@ -1,9 +1,8 @@
 <section class="popular-causes-two">
     <div class="container">
         <div class="block-title text-center">
-            {{--            <h4>Help the People</h4>--}}
             <h4></h4>
-            <h2>Our Popular Causes</h2>
+            <h2>@lang('frontend.titles.our_popular_causes')</h2>
         </div>
         <div class="row">
             @foreach($donations as $donation)
@@ -12,7 +11,6 @@
                         <div class="popular-causes__img">
                             <img src="{{$donation->first_image}}" alt="">
                             <div class="popular-causes__category">
-                                {{--                            <p>Food</p>--}}
                             </div>
                         </div>
                         <div class="popular-causes__content">
@@ -21,17 +19,6 @@
                                     >{{\Illuminate\Support\Str::limit($donation->translate(locale())->title,30)}}</a></h3>
                                 <p>{{\Illuminate\Support\Str::limit($donation->translate(locale())->content,100)}}</p>
                             </div>
-{{--                            <div class="popular-causes__progress">--}}
-{{--                                <div class="bar">--}}
-{{--                                    <div class="bar-inner count-bar" data-percent="36%">--}}
-{{--                                        <div class="count-text">{{$donation->percent}}%</div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="popular-causes__goals">--}}
-{{--                                    <p><span>${{$donation->raised}}</span> Raised</p>--}}
-{{--                                    <p><span>${{$donation->goal}}</span> Goal</p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
                         </div>
                     </div>
                 </div>

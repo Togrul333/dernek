@@ -4,8 +4,8 @@
             <div class="col-xl-12">
                 <div class="cta-one__inner">
                     <div class="cta-one__text">
-                        <p>Help People in Need</p>
-                        <h3>You Can Touch Their Lives Too</h3>
+                        <p><?php echo app('translator')->get('frontend.titles.help_people_in_need'); ?></p>
+                        <h3><?php echo app('translator')->get('frontend.titles.you_can_touch_their_lives_too'); ?></h3>
                     </div>
                     <div class="cta-one__btn">
 

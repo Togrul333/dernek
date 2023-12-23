@@ -3,14 +3,14 @@
     @include('frontend.includes.header_two')
 @endsection
 @section('content')
-    <section class="page-header" style="background-image: url({{asset('frontend/assets/images/backgrounds/page-header-bg.jpg')}});">
+    <section class="page-header" style="background-image: url({{asset('frontend/assets/images/en-guzel-turk-bayrakli-manzarali-camiler.jpg')}});">
         <div class="container">
             <div class="page-header__inner">
-                <h2>Donations</h2>
+                <h2>@lang('frontend.titles.donations')</h2>
                 <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="{{route('frontend.dashboard')}}">Home</a></li>
+                    <li><a href="{{route('frontend.dashboard')}}">@lang('frontend.titles.home')</a></li>
                     <li><span>/</span></li>
-                    <li>Donations</li>
+                    <li>@lang('frontend.titles.donations')</li>
                 </ul>
             </div>
         </div>
@@ -31,10 +31,10 @@
                                 </div>
                                 <div class="meet-volunteers-one__social-info">
                                     <div class="left">
-                                        <p>Donate {{$donation->price}} ₺</p>
+                                        <p> {{$donation->price}} ₺</p>
                                     </div>
                                     <div class="main-nav__right__btn-one">
-                                        <a href=""><i class="fas fa-heart"></i>Donate</a>
+                                        <a href=""><i class="fas fa-heart"></i>@lang('frontend.titles.donate')</a>
                                     </div>
                                 </div>
                             </div>
@@ -48,15 +48,15 @@
                             </div>
                             <div class="meet-volunteers-one__content">
                                 <div class="meet-volunteers-one__name">
-                                    <h3>Genel Bağış</h3>
+                                    <h3>@lang('frontend.titles.general_donation')</h3>
                                     <input type="number">
                                 </div>
                                 <div class="meet-volunteers-one__social-info">
-                                    <div class="left">
-                                        <p>Genel Bağış</p>
-                                    </div>
-                                    <div class="main-nav__right__btn-one">
-                                        <a href=""><i class="fas fa-heart"></i>Donate</a>
+{{--                                    <div class="left">--}}
+{{--                                        <p></p>--}}
+{{--                                    </div>--}}
+                                    <div class="main-nav__right__btn-one ml-2">
+                                        <a href=""><i class="fas fa-heart"></i>@lang('frontend.titles.donate')</a>
                                     </div>
                                 </div>
                             </div>

@@ -2,14 +2,14 @@
     <?php echo $__env->make('frontend.includes.header_two', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
-    <section class="page-header" style="background-image: url(<?php echo e(asset('frontend/assets/images/backgrounds/page-header-bg.jpg')); ?>);">
+    <section class="page-header" style="background-image: url(<?php echo e(asset('frontend/assets/images/en-guzel-turk-bayrakli-manzarali-camiler.jpg')); ?>);">
         <div class="container">
             <div class="page-header__inner">
-                <h2>Become a Volunteer</h2>
+                <h2><?php echo app('translator')->get('frontend.titles.become_a_volunteer'); ?></h2>
                 <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="<?php echo e(route('frontend.dashboard')); ?>">Home</a></li>
+                    <li><a href="<?php echo e(route('frontend.dashboard')); ?>"><?php echo app('translator')->get('frontend.titles.home'); ?></a></li>
                     <li><span>/</span></li>
-                    <li>Become a Volunteer</li>
+                    <li><?php echo app('translator')->get('frontend.titles.become_a_volunteer'); ?></li>
                 </ul>
             </div>
         </div>
@@ -23,9 +23,9 @@
                             <img src="<?php echo e(asset('frontend/assets/images/sukuyusu_1-1536x1025.png')); ?>" alt="">
                         </div>
                         <div class="become-volunteer__requirements">
-                            <h3>GÖNÜLLÜ OL</h3>
+                            <h3><?php echo app('translator')->get('frontend.titles.become_a_volunteer'); ?></h3>
                             <p class="become-volunteer__text"
-                            >Gönüllü ol, sevgiyi ve umudu yayabiliriz. Yeteneklerinle Afrika'ya dokun</p>
+                            ><?php echo app('translator')->get('frontend.titles.become_a_volunteer_text'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -34,27 +34,27 @@
                         <form class="become-volunteer__form" id="contact-form"
                               data-url="<?php echo e(route('frontend.volunteerForm')); ?>">
                             <div class="become-volunteer__input">
-                                <input type="text" placeholder="Ad Soyad:" id="name" name="name">
+                                <input type="text" placeholder="<?php echo app('translator')->get('frontend.titles.form_name_placeholder'); ?>" id="name" name="name">
                             </div>
                             <div class="become-volunteer__input">
-                                <input type="email" placeholder="Email Adresi:" id="email" name="email">
+                                <input type="email" placeholder="<?php echo app('translator')->get('frontend.titles.form_email_placeholder'); ?>" id="email" name="email">
                             </div>
                             <div class="become-volunteer__input">
-                                <input type="text" placeholder="Telefon:" id="phone" name="phone">
+                                <input type="text" placeholder="<?php echo app('translator')->get('frontend.titles.form_phone_placeholder'); ?>" id="phone" name="phone">
                             </div>
                             <div class="become-volunteer__input">
-                                <input type="text" placeholder="Ülke:" id="country" name="country">
+                                <input type="text" placeholder="<?php echo app('translator')->get('frontend.titles.form_country_placeholder'); ?>" id="country" name="country">
                             </div>
                             <div class="become-volunteer__input">
-                                <input type="text" placeholder="Şehir:" id="city" name="city">
+                                <input type="text" placeholder="<?php echo app('translator')->get('frontend.titles.form_city_placeholder'); ?>" id="city" name="city">
                             </div>
                             <div class="become-volunteer__input">
-                                <input type="text" placeholder="Meslek:" id="role" name="role">
+                                <input type="text" placeholder="<?php echo app('translator')->get('frontend.titles.form_role_placeholder'); ?>" id="role" name="role">
                             </div>
                             <div class="become-volunteer__input">
-                                <textarea name="message" id="message" placeholder="Öneri ve Görüş:"></textarea>
+                                <textarea name="message" id="message" placeholder="<?php echo app('translator')->get('frontend.titles.form_message_placeholder'); ?>"></textarea>
                             </div>
-                            <button type="submit" class="thm-btn become-volunteer__form-btn">Send Message</button>
+                            <button type="submit" class="thm-btn become-volunteer__form-btn"><?php echo app('translator')->get('frontend.titles.send_message'); ?></button>
                         </form>
                     </div>
                 </div>

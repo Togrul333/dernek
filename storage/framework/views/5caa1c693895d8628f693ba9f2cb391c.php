@@ -26,7 +26,7 @@
                                 <div class="col-xl-12">
                                     <p><?php echo e(translation($slider)->name); ?></p>
                                     <h2><?php echo translation($slider)->text; ?></h2>
-                                    <a href="<?php echo e(route('frontend.news')); ?>" class="thm-btn">Learn More</a>
+                                    <a href="<?php echo e(route('frontend.news')); ?>" class="thm-btn"><?php echo app('translator')->get('frontend.titles.learn_more'); ?></a>
                                 </div>
                             </div>
                         </div>

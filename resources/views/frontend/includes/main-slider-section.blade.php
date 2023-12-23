@@ -26,7 +26,7 @@
                                 <div class="col-xl-12">
                                     <p>{{translation($slider)->name}}</p>
                                     <h2>{!! translation($slider)->text !!}</h2>
-                                    <a href="{{route('frontend.news')}}" class="thm-btn">Learn More</a>
+                                    <a href="{{route('frontend.news')}}" class="thm-btn">@lang('frontend.titles.learn_more')</a>
                                 </div>
                             </div>
                         </div>

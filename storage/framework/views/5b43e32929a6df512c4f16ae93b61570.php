@@ -47,53 +47,23 @@
                         <div class="main-nav__main-navigation clearfix">
                             <ul class=" main-nav__navigation-box float-left">
                                 <li class="dropdown <?php echo e(url()->current() == route('frontend.dashboard') ? 'current' : ''); ?>">
-                                    <a href="<?php echo e(route('frontend.dashboard')); ?>">Home</a>
-
-
-
-
-
-
-
-
-
-
-
-
+                                    <a href="<?php echo e(route('frontend.dashboard')); ?>"><?php echo app('translator')->get('frontend.titles.home'); ?></a>
                                 </li>
-
-
-
-
-
-
-
-
-
-
                                 <li class="dropdown <?php echo e(url()->current() == route('frontend.donations') ? 'current' : ''); ?>">
-                                    <a href="<?php echo e(route('frontend.donations')); ?>">Donations</a>
-
-
-
-
+                                    <a href="<?php echo e(route('frontend.donations')); ?>"><?php echo app('translator')->get('frontend.titles.donations'); ?></a>
                                 </li>
 
                                 <li class="dropdown <?php echo e(url()->current() == route('frontend.news') ? 'current' : ''); ?>">
-                                    <a href="<?php echo e(route('frontend.news')); ?>">News</a>
-
-
-
-
+                                    <a href="<?php echo e(route('frontend.news')); ?>"><?php echo app('translator')->get('frontend.titles.news'); ?></a>
                                 </li>
                                 <li class="<?php echo e(url()->current() == route('frontend.contact') ? 'current' : ''); ?>">
-                                    <a href="<?php echo e(route('frontend.contact')); ?>">Contact</a>
+                                    <a href="<?php echo e(route('frontend.contact')); ?>"><?php echo app('translator')->get('frontend.titles.contact'); ?></a>
                                 </li>
-                                <li class="<?php echo e(url()->current() == route('frontend.volunteer') ? 'current' : ''); ?>">
-                                    <a href="<?php echo e(route('frontend.volunteer')); ?>">Gönüllü ol</a>
-                                </li>
+
+
+
                                 <li class="dropdown ">
-                                    <a href="">language</a>
+                                    <a href=""><?php echo app('translator')->get('frontend.titles.language'); ?></a>
                                     <ul>
                                         <?php $__currentLoopData = $langs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $lang): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <li><a href="<?php echo e(route('frontend.lang.switch', $lang->code)); ?>"><?php echo e($lang->name); ?></a></li>
@@ -105,13 +75,8 @@
                     </div>
                     <div class="main-nav__right main-nav__right-one float-right">
                         <div class="main-nav__right__btn-one">
-                            <a href="<?php echo e(route('frontend.donate')); ?>"><i class="fas fa-heart"></i>Donate</a>
+                            <a href="<?php echo e(route('frontend.donate')); ?>"><i class="fas fa-heart"></i><?php echo app('translator')->get('frontend.titles.donate'); ?></a>
                         </div>
-
-
-
-
-
                         <div class="main-nav__right__icon-search-box">
                             <a href="#" class="main-nav__search search-popup__toggler">
                                 <i class="icon-magnifying-glass"></i>

@@ -14,7 +14,7 @@
             <div class="news-one__title">
                 <h3><a href="<?php echo e(route('frontend.news.detail',['news'=>$news])); ?>"><?php echo e($news->translate(locale())->title); ?></a></h3>
             </div>
-            <a href="<?php echo e(route('frontend.news.detail',['news'=>$news])); ?>" class="thm-btn news-one__btn">More</a>
+            <a href="<?php echo e(route('frontend.news.detail',['news'=>$news])); ?>" class="thm-btn news-one__btn"><?php echo app('translator')->get('frontend.titles.more'); ?></a>
         </div>
     </div>
 </div>

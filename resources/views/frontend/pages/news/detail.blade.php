@@ -3,14 +3,14 @@
     @include('frontend.includes.header_two')
 @endsection
 @section('content')
-    <section class="page-header" style="background-image: url({{asset('frontend/assets/images/backgrounds/page-header-bg.jpg')}});">
+    <section class="page-header" style="background-image: url({{asset('frontend/assets/images/en-guzel-turk-bayrakli-manzarali-camiler.jpg')}});">
         <div class="container">
             <div class="page-header__inner">
-                <h2>News</h2>
+                <h2>@lang('frontend.titles.news')</h2>
                 <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="{{route('frontend.dashboard')}}">Home</a></li>
+                    <li><a href="{{route('frontend.dashboard')}}">@lang('frontend.titles.home')</a></li>
                     <li><span>/</span></li>
-                    <li>News</li>
+                    <li>@lang('frontend.titles.news')</li>
                 </ul>
             </div>
         </div>
@@ -37,13 +37,12 @@
                 <div class="col-xl-4 col-lg-5">
                     <div class="sidebar">
                         <div class="sidebar__single sidebar__post">
-                            <h3 class="sidebar__title">Recent News</h3>
+{{--                            <h3 class="sidebar__title">Recent News</h3>--}}
                             <ul class="sidebar__post-list list-unstyled">
                                 @foreach($some_news as $item)
                                 <li>
                                     <div class="sidebar__post-image">
                                         <img src="{{$item->first_image}}" alt="">
-{{--                                        <img src="{{asset('frontend/assets/images/blog/lp-1-1.jpg')}}" alt="">--}}
                                     </div>
                                     <div class="sidebar__post-content">
                                         <h3>

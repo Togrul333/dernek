@@ -4,10 +4,10 @@
             <div class="col-xl-4">
                 <div class="news-two__left">
                     <div class="block-title text-left">
-                        <h4>From the Blog</h4>
-                        <h2>Latest News <br> & Articles</h2>
+                        <h4>@lang('frontend.titles.from_the_blog')</h4>
+                        <h2>@lang('frontend.titles.latest_news')</h2>
                     </div>
-                    <p class="news-two__text">We Work for Humanity</p>
+                    <p class="news-two__text">@lang('frontend.titles.we_work_for_humanity')</p>
                 </div>
             </div>
             <div class="col-xl-8">
@@ -25,17 +25,11 @@
                                 </div>
                             </div>
                             <div class="news-one__content">
-{{--                                <ul class="list-unstyled news-one__meta">--}}
-{{--                                    <li><a href="#"><i class="far fa-user-circle"></i> Admin</a></li>--}}
-{{--                                    <li><span>/</span></li>--}}
-{{--                                    <li><a href="#"><i class="far fa-comments"></i> 2 Comments</a>--}}
-{{--                                    </li>--}}
-{{--                                </ul>--}}
                                 <div class="news-one__title">
                                     <h3><a href="{{route('frontend.news.detail',['news'=>$new_item])}}">{!! translation($new_item)->title !!}</a>
                                     </h3>
                                 </div>
-                                <a href="{{route('frontend.news.detail',['news'=>$new_item])}}" class="thm-btn news-one__btn">More</a>
+                                <a href="{{route('frontend.news.detail',['news'=>$new_item])}}" class="thm-btn news-one__btn">@lang('frontend.titles.more')</a>
                             </div>
                         </div>
                         @endforeach

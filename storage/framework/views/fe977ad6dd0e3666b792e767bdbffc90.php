@@ -63,7 +63,7 @@
     </div>
     <div class="search-popup__inner">
         <form method="get" action="<?php echo e(route('frontend.news')); ?>" class="search-popup__form">
-            <input type="text" name="search" placeholder="Search....">
+            <input type="text" name="search" placeholder="Aramak....">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
